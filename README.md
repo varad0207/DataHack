@@ -1,6 +1,5 @@
 # DataHack-Numadic
-- Dataset Link: https://nuws.co/datahack-dataset
-- Predicted Dataset Link : https://drive.google.com/file/d/1UxU2C10pxLuI1EBN67wz_Q0Xk06Jo3yp/view?usp=share_link
+Dataset Link: https://nuws.co/datahack-dataset
 
 data-visualization.ipynb file contains the data visualization tasks performed 
 
@@ -27,3 +26,11 @@ So, in conclusion:
 1. Judging based on the evaluation matrix, Logistic Regression model with Grid Search for tuning of hyperparameters gave an accuracy of 91.42% on hold-out test set, with L1 as penalty and C value equal to 1. Random Forest Classifier gave an accuracy of 91.23% and KNN an accuracy of 88.4% with K=1 on the same data
 2. I would prefer Logistic Regression model on this data set because of its high accuracy and less computational time
 
+Predictions made by Logistic Regression model on test set: https://drive.google.com/file/d/1UxU2C10pxLuI1EBN67wz_Q0Xk06Jo3yp/view?usp=share_link
+
+Instruction to load the models: 
+1. Download the joblib files from the drive link
+2. Load them using the code snippet:
+from joblib import load
+model = load('model_name.joblib')
+3. Since the models are trained on a scaled and PCA performed data, it will give better results if the test data fed to it is also scaled and has been performed PCA
