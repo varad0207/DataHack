@@ -35,4 +35,5 @@ Instruction to load the models:
 from joblib import load
 
 model = load('model_name.joblib')
+
 3. Since the models are trained on a scaled and PCA performed data, it will give better results if the test data fed to it is also scaled and has been performed PCA
